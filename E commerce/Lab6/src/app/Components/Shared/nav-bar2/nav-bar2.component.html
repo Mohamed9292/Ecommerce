@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg  bg-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><h1> Market <span class="badge bg-secondary"><i class="bi bi-shop"></i></span>&nbsp;</h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link " [routerLink]="['/']" [routerLinkActive]="'active btn btn-outline-success'"
+            [routerLinkActiveOptions]="{exact:true}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/products']"
+            [routerLinkActive]="'active btn btn-outline-success'">Products</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/contact']"
+            [routerLinkActive]="'active btn btn-outline-success'">Contact</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/error']" [routerLinkActive]="'active btn btn-outline-success'">Coming
+            Soon!</a>
+        </li>
+      </ul>
+      <i type="button" class="bi fs-4 bi-cart4 text-light position-relative me-5 p-0" [routerLink]="['/cart']"
+        [routerLinkActive]="'active btn btn-outline-success text-danger'">
+        <span class="position-absolute fs-6 top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          {{cart.length}}
+          <span class="visually-hidden">unread messages</span>
+        </span>
+      </i>
+
+      <form class="d-flex" role="search">
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2" [routerLink]="['/login']" [routerLinkActive]="'btn btn-outline-light me-2'">Login</button>
+          <button type="button" class="btn btn-warning">Sign-up</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</nav>
